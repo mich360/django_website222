@@ -1,0 +1,43 @@
+{%  extends "base.html" %}
+{% load static %}
+{% block  main %} 
+{% if username == "mich" %}
+<h1>自分です</h1>
+{% elif username%}
+ <H1>{{ username }}さん、ようこそ !</H1>
+{% else %}
+<h1> 匿名さん、ようこそ !</h1>
+{% endif %}
+<img src="{% static 'bara.png' %}"/>
+<p>参照　https://youtu.be/b6XnrM_zK1s?t=2633　</p>
+{% endblock %} 
+
+
+
+
+
+
+
+
+
+
+
+<!--元のページ 
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>website</title>
+</head>
+<body>
+   {% include "_navbar.html" %}  <!--タグ-->
+   <!--<h1>Home</h1>
+     <P>レンダリング : テンプレイトをアクセスごと書き換える </P>
+     <P>テンプレイトを組み立てる3つの要素</P>
+    {% include "_footer.html" %}  <!--タグ-->
+<!--</body>
+</html> -->
